@@ -6,6 +6,9 @@ class TaskState {
   TaskState({required this.task});
 }
 
-class TaskNotifier extends StateNotifier {
+class TaskNotifier extends StateNotifier<List<TaskState>> {
   TaskNotifier(super.state);
+  void addTask(String task) {
+    state = [...state, TaskState(task: task)];
+  }
 }
