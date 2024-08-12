@@ -74,13 +74,14 @@ class Home extends StatelessWidget {
       body: ListView.builder(
         itemCount: 3,
         itemBuilder: (context, index) {
-          return Padding(
-              padding: const EdgeInsets.only(
-                top: 20.0,
-                left: 20,
-                right: 20,
-              ),
-              child: ViewTask());
+          return const Padding(
+            padding: EdgeInsets.only(
+              top: 20.0,
+              left: 20,
+              right: 20,
+            ),
+            child: ViewTask(),
+          );
         },
       ),
     );
