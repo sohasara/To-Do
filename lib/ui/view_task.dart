@@ -15,7 +15,18 @@ class ViewTask extends StatelessWidget {
           Radius.circular(18),
         ),
       ),
-      child: Text(text),
+      child: Padding(
+        padding: const EdgeInsets.only(
+          top: 20.0,
+          left: 20,
+        ),
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontSize: 20,
+          ),
+        ),
+      ),
     );
   }
 }
