@@ -8,8 +8,11 @@ class ViewTask extends StatelessWidget {
     return Container(
       height: 85,
       width: 250,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.yellow,
+        borderRadius: BorderRadius.all(
+          Radius.circular(18),
+        ),
       ),
     );
   }
