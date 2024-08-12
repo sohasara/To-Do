@@ -51,6 +51,7 @@ class Home extends ConsumerWidget {
                       ref
                           .read(taskProvider.notifier)
                           .addTask(taskController.text);
+                      Navigator.pop(context);
                     },
                     child: const Text(
                       'Save',
@@ -79,7 +80,7 @@ class Home extends ConsumerWidget {
         backgroundColor: Colors.yellow,
       ),
       body: ListView.builder(
-        itemCount: 8,
+        itemCount: task.length,
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.only(
@@ -88,7 +89,7 @@ class Home extends ConsumerWidget {
               right: 20,
             ),
             child: ViewTask(
-              text: taskController.text,
+              text: task[index].task,
             ),
           );
         },
