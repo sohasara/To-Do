@@ -42,9 +42,7 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {
-                      
-                    },
+                    onPressed: () {},
                     child: const Text(
                       'Save',
                       style: TextStyle(
@@ -63,7 +61,12 @@ class Home extends StatelessWidget {
       ),
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('TO DO APP'),
+        title: const Text(
+          'TO DO APP',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         backgroundColor: Colors.yellow,
       ),
       body: ListView.builder(
