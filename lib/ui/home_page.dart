@@ -72,7 +72,7 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.yellow,
       ),
       body: ListView.builder(
-        itemCount: 3,
+        itemCount: 8,
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.only(
