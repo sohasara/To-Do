@@ -23,7 +23,8 @@ class Home extends StatelessWidget {
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(22),
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
