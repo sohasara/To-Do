@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:to_do/state_manage/task_provider.dart';
 import 'package:to_do/ui/view_task.dart';
 
-class Home extends StatelessWidget {
+class Home extends ConsumerWidget {
   const Home({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final task = ref.watch(taskProvider);
     TextEditingController taskController = TextEditingController();
     return Scaffold(
       backgroundColor: Colors.yellow[200],
@@ -44,7 +47,11 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      ref
+                          .read(taskProvider.notifier)
+                          .addTask(taskController.text);
+                    },
                     child: const Text(
                       'Save',
                       style: TextStyle(
