@@ -9,7 +9,7 @@ class ViewTask extends StatelessWidget {
       height: 100,
       width: 300,
       decoration: BoxDecoration(
-        color: Colors.amber,
+        color: Colors.yellow,
       ),
     );
   }
