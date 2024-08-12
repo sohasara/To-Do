@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ViewTask extends StatelessWidget {
-  const ViewTask({super.key});
+  final String text;
+  const ViewTask({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class ViewTask extends StatelessWidget {
           Radius.circular(18),
         ),
       ),
+      child: Text(text),
     );
   }
 }
