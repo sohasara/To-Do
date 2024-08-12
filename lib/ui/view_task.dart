@@ -6,8 +6,8 @@ class ViewTask extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
-      width: 300,
+      height: 85,
+      width: 250,
       decoration: BoxDecoration(
         color: Colors.yellow,
       ),
