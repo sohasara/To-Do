@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do/ui/view_task.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -74,29 +75,12 @@ class Home extends StatelessWidget {
         itemCount: 3,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.only(
-              top: 20.0,
-              left: 20,
-              right: 20,
-            ),
-            child: Container(
-              //padding: const EdgeInsets.all(8),
-              height: 80,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(22),
-                color: Colors.yellow,
+              padding: const EdgeInsets.only(
+                top: 20.0,
+                left: 20,
+                right: 20,
               ),
-              child: Row(
-                children: [
-                  Checkbox(
-                    value: true,
-                    onChanged: (value) {},
-                  ),
-                  Text(taskController.text),
-                ],
-              ),
-            ),
-          );
+              child: ViewTask());
         },
       ),
     );
