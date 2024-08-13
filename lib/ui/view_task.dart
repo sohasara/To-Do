@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:to_do/state_manage/task_provider.dart';
 
-class ViewTask extends StatelessWidget {
+class ViewTask extends ConsumerWidget {
   final String text;
-  const ViewTask({super.key, required this.text});
+  final bool? value;
+  final int index;
+  const ViewTask({
+    super.key,
+    required this.text,
+    required this.index,
+    this.value,
+  });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       height: 75,
       width: 250,
@@ -22,7 +31,9 @@ class ViewTask extends StatelessWidget {
         children: [
           Checkbox(
             value: true,
-            onChanged: (value) {},
+            onChanged: (value) {
+              ref.read(taskProvider.notifier).onChangedtoggle(index);
+            },
           ),
           Text(
             text,

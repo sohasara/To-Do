@@ -50,7 +50,8 @@ class Home extends ConsumerWidget {
                     onPressed: () {
                       ref
                           .read(taskProvider.notifier)
-                          .addTask(taskController.text);
+                          .addTask(taskController.text, false);
+                      taskController.clear();
                       Navigator.pop(context);
                     },
                     child: const Text(
@@ -90,6 +91,8 @@ class Home extends ConsumerWidget {
             ),
             child: ViewTask(
               text: task[index].task,
+              value: task[index].value,
+              index: index,
             ),
           );
         },
