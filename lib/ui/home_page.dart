@@ -51,7 +51,7 @@ class Home extends ConsumerWidget {
                       ref
                           .read(taskProvider.notifier)
                           .addTask(taskController.text);
-                      taskController.clear();
+
                       Navigator.pop(context);
                     },
                     child: const Text(
