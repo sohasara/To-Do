@@ -32,7 +32,7 @@ class ViewTask extends ConsumerWidget {
           Checkbox(
             value: true,
             onChanged: (value) {
-              ref.read(taskProvider.notifier).onChangedtoggle(index);
+              ref.read(taskProvider.notifier).toggleTask(index);
             },
           ),
           Text(

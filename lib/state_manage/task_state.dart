@@ -9,11 +9,12 @@ class TaskState {
 
 class TaskNotifier extends StateNotifier<List<TaskState>> {
   TaskNotifier(super.state);
-  void addTask(String task, bool value) {
+
+  void addTask(String task) {
     state = [...state, TaskState(task: task, value: false)];
   }
 
-  void onChangedtoggle(int index) {
+  void toggleTask(int index) {
     state = [
       for (int i = 0; i < state.length; i++)
         if (i == index)

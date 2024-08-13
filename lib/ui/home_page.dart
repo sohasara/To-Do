@@ -50,7 +50,7 @@ class Home extends ConsumerWidget {
                     onPressed: () {
                       ref
                           .read(taskProvider.notifier)
-                          .addTask(taskController.text, false);
+                          .addTask(taskController.text);
                       taskController.clear();
                       Navigator.pop(context);
                     },
