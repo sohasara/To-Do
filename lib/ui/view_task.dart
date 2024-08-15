@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:to_do/state_manage/task_provider.dart';
 
 class ViewTask extends ConsumerWidget {
   final String text;
