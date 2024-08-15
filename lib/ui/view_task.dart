@@ -4,13 +4,10 @@ import 'package:to_do/state_manage/task_provider.dart';
 
 class ViewTask extends ConsumerWidget {
   final String text;
-  final bool? value;
-  final int index;
+
   const ViewTask({
     super.key,
     required this.text,
-    required this.index,
-    this.value,
   });
 
   @override
@@ -31,9 +28,7 @@ class ViewTask extends ConsumerWidget {
         children: [
           Checkbox(
             value: true,
-            onChanged: (value) {
-              ref.read(taskProvider.notifier).toggleTask(index);
-            },
+            onChanged: (value) {},
           ),
           Text(
             text,
