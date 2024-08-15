@@ -31,19 +31,8 @@ class Home extends ConsumerWidget {
                 ),
                 actions: [
                   MaterialButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Cancel',
-                      style: TextStyle(
-                        fontSize: 17,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  TextButton(
                     onPressed: () {
-                      Navigator.of(context).pop();
+                      Navigator.pop(context);
                     },
                     child: const Text(
                       'Cancel',
