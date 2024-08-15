@@ -24,15 +24,23 @@ class Home extends ConsumerWidget {
                 content: TextField(
                   controller: taskController,
                   decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
                     border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(18),
+                      borderRadius: BorderRadius.circular(15),
                     ),
                   ),
                 ),
                 actions: [
+                  MaterialButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Cancel',
+                      style: TextStyle(
+                        fontSize: 17,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
