@@ -8,7 +8,7 @@ class Home extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final task = ref.watch(taskProvider);
+    final task = ref.watch(taskNotifierPro);
     TextEditingController taskController = TextEditingController();
     return Scaffold(
       backgroundColor: Colors.yellow[200],
@@ -46,7 +46,7 @@ class Home extends ConsumerWidget {
                   MaterialButton(
                     onPressed: () {
                       ref
-                          .read(taskProvider.notifier)
+                          .read(taskNotifierPro.notifier)
                           .addTask(taskController.text);
 
                       Navigator.pop(context);
