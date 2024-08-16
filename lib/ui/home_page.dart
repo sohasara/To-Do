@@ -43,7 +43,7 @@ class Home extends ConsumerWidget {
                       ),
                     ),
                   ),
-                  TextButton(
+                  MaterialButton(
                     onPressed: () {
                       ref
                           .read(taskProvider.notifier)

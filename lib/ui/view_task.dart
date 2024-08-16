@@ -25,10 +25,6 @@ class ViewTask extends ConsumerWidget {
       ),
       child: Row(
         children: [
-          Checkbox(
-            value: true,
-            onChanged: (value) {},
-          ),
           Text(
             text,
             style: const TextStyle(
