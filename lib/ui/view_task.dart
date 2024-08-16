@@ -24,6 +24,7 @@ class ViewTask extends ConsumerWidget {
         ),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Text(
             text,
@@ -31,6 +32,13 @@ class ViewTask extends ConsumerWidget {
               fontSize: 20,
             ),
           ),
+          const SizedBox(
+            width: 60,
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.delete),
+          )
         ],
       ),
     );
