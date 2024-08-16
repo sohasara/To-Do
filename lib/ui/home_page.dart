@@ -88,6 +88,7 @@ class Home extends ConsumerWidget {
             ),
             child: ViewTask(
               text: task[index].task,
+              index: index,
             ),
           );
         },

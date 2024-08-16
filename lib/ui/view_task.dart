@@ -3,10 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ViewTask extends ConsumerWidget {
   final String text;
+  final int index;
 
   const ViewTask({
     super.key,
     required this.text,
+    required this.index,
   });
 
   @override
