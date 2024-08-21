@@ -6,7 +6,10 @@ part 'data_class.g.dart';
 class Tasks {
   @HiveField(0)
   final String task;
+  @HiveField(1)
+  final String time;
   Tasks({
     required this.task,
+    required this.time,
   });
 }
