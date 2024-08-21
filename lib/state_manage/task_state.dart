@@ -22,7 +22,7 @@ class TaskNotifier extends StateNotifier<List<Tasks>> {
       return;
     } else {
       final DateTime date = DateTime.now();
-      String formatedDate = DateFormat('dd-MM-yyyy').format(date);
+      String formatedDate = DateFormat('hh:mm ,dd-MM-yyyy').format(date);
       final taskk = Tasks(task: task, time: formatedDate);
       _box.add(taskk);
       state = [...state, taskk];
