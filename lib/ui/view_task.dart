@@ -17,7 +17,7 @@ class ViewTask extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
-      height: 85,
+      height: 80,
       width: 250,
       padding: const EdgeInsets.only(
         left: 10,
@@ -31,21 +31,26 @@ class ViewTask extends ConsumerWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Column(
-            children: [
-              Text(
-                text,
-                style: const TextStyle(
-                  fontSize: 20,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  text,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              Text(
-                time,
-                style: const TextStyle(
-                  fontSize: 15,
+                Text(
+                  time,
+                  style: const TextStyle(
+                    fontSize: 15,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           const SizedBox(
             width: 60,
