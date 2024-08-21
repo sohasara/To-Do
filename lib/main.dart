@@ -10,6 +10,7 @@ void main() async {
   await Hive.initFlutter();
   await getApplicationDocumentsDirectory();
   Hive.registerAdapter(TasksAdapter());
+  // await Hive.deleteBoxFromDisk('taskbox');
 
   runApp(const ProviderScope(child: MyApp()));
 }

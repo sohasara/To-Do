@@ -5,11 +5,13 @@ import 'package:to_do/state_manage/task_provider.dart';
 class ViewTask extends ConsumerWidget {
   final String text;
   final int index;
+  final String time;
 
   const ViewTask({
     super.key,
     required this.text,
     required this.index,
+    required this.time,
   });
 
   @override
@@ -38,7 +40,7 @@ class ViewTask extends ConsumerWidget {
                 ),
               ),
               Text(
-                text,
+                time,
                 style: const TextStyle(
                   fontSize: 15,
                 ),

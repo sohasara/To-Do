@@ -2,6 +2,7 @@
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:intl/intl.dart';
 import 'package:to_do/data/data_class.dart';
 
 class TaskNotifier extends StateNotifier<List<Tasks>> {
@@ -20,7 +21,9 @@ class TaskNotifier extends StateNotifier<List<Tasks>> {
     if (_box == null) {
       return;
     } else {
-      final taskk = Tasks(task: task);
+      final DateTime date = DateTime.now();
+      String formatedDate = DateFormat('dd-MM-yyyy').format(date);
+      final taskk = Tasks(task: task, time: formatedDate);
       _box.add(taskk);
       state = [...state, taskk];
     }
